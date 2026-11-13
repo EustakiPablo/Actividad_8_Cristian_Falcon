@@ -2,7 +2,7 @@
   "name": "express-init-template",
   "version": "2.0.0",
   "type": "module",
-  "description": "This is a basic Express application template designed to help you create APIs quickly. It includes essential configurations and setup for starting an Express server.",
+  "description": "",
   "main": "index.js",
   "engines": {
     "node": ">=22.9"
@@ -16,11 +16,13 @@
     "init",
     "template"
   ],
-  "author": "Mario Girón Martín",
+  "author": "Cristian Falcón García",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.0.0"
+    "express": "^5.0.0",
+    "mysql2": "^3.24.6",
+    "sequelize": "^6.37.8"
   },
   "devDependencies": {
     "@types/express": "^5.0.0"

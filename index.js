@@ -2,6 +2,22 @@
 import http from "node:http";
 import app from "./src/app.js";
 
+import './src/models/index.js'; // Import the models to establish the database connection
+
+import sequelize from "./src/config/db.js";
+
+
+try{
+    await sequelize.authenticate();
+    console.log("Connection to the database has been established successfully.");
+
+    await sequelize.sync(); // Synchronize the models with the database
+    console.log("Database synchronized successfully.");
+} catch (error) {
+    console.error("Error connecting to the database:", error);
+    process.exit(1); // Exit the process with an error code
+}
+
 // Server creation
 const server = http.createServer(app);
 

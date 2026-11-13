@@ -2,12 +2,14 @@
 @baseUrl = http://localhost:3000
 
 ### GET example
-GET {{baseUrl}}/api
+GET {{baseUrl}}/api/authors
 
 ### POST example
-POST {{baseUrl}}/api
+POST {{baseUrl}}/api/authors
 Content-Type: application/json
 
 {
-    "name": "example"
+    "name": "example",
+    "email": "example@example.com",
+    "image": "https://example.com/image.jpg"
 }
