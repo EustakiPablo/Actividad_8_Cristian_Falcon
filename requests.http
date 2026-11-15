@@ -1,15 +1,28 @@
 // Requests to test the API from VS Code (REST Client extension)
 @baseUrl = http://localhost:3000
 
-### GET example
+### GET example from authors endpoint
 GET {{baseUrl}}/api/authors
 
-### POST example
-POST {{baseUrl}}/api/authors
+#### GET by ID example from authors endpoint
+GET {{baseUrl}}/api/authors/1
+
+### GET all posts example from posts endpoint
+GET {{baseUrl}}/api/posts
+
+### GET by ID example from posts endpoint
+GET {{baseUrl}}/api/posts/1
+
+### POST example to create a new post
+POST {{baseUrl}}/api/posts
 Content-Type: application/json
 
 {
-    "name": "example",
-    "email": "example@example.com",
-    "image": "https://example.com/image.jpg"
+  "title": "New Post Title",
+  "description": "This is the content of the new post.",
+  "category": "category1",
+  "authorId": 2
 }
+
+### GET example to retrieve all posts by a specific author
+GET {{baseUrl}}/api/authors/1/posts

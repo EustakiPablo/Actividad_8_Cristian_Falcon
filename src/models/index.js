@@ -3,8 +3,11 @@ import Post from "./post.model.js";
 
 
 
-Author.hasMany(Post, {onDelete: "CASCADE"});
-Post.belongsTo(Author);
+Author.hasMany(Post, {
+    foreignKey: "authorId",
+    onDelete: "CASCADE"
+});
+Post.belongsTo(Author,{foreignKey: "authorId"});
 
 
 export { Author, Post };
